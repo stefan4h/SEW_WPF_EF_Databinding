@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Slider_Databinding_Example"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="106.4" Width="128">
+    <StackPanel HorizontalAlignment="Left" Height="100" Margin="0,0,0,-29.6" VerticalAlignment="Top" Width="100">
+        <Button Height="35" Margin="0,0,-20,0" Click="ButtonNormal_OnClick">Normaler Slider</Button>
+        <Button Height="35" Margin="0,0,-20,0" Click="ButtonColour_OnClick">Colour Slider</Button>
+    </StackPanel>
+
 </Window>

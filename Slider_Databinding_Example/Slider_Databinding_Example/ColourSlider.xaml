@@ -1,0 +1,32 @@
+﻿<Window x:Class="Slider_Databinding_Example.ColourSlider"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Slider_Databinding_Example"
+        mc:Ignorable="d"
+        Title="ColourSlider" Height="300" Width="300">
+    <Window.DataContext>
+        <local:SliderVM></local:SliderVM>
+    </Window.DataContext>
+    <StackPanel Margin="10" VerticalAlignment="Center">
+        <Button x:Name="button" Content="Random Colour" Margin="60,0,60,20" Command="{Binding RandomColour}" />
+        <DockPanel VerticalAlignment="Center" Margin="10">
+            <Label DockPanel.Dock="Left" FontWeight="Bold" Content="R:"/>
+            <TextBox Text="{Binding RedValue, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" Width="40" />
+            <Slider Maximum="255" TickPlacement="BottomRight" TickFrequency="5" Value="{Binding RedValue,Mode=TwoWay}" IsSnapToTickEnabled="True" x:Name="slider_red" ValueChanged="ColorSlider_ValueChanged" />
+        </DockPanel>
+
+        <DockPanel VerticalAlignment="Center" Margin="10">
+            <Label DockPanel.Dock="Left" FontWeight="Bold" Content="G:"/>
+            <TextBox Text="{Binding GreenValue, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" Width="40" />
+            <Slider Maximum="255" TickPlacement="BottomRight" TickFrequency="5" Value="{Binding GreenValue,Mode=TwoWay}" IsSnapToTickEnabled="True" x:Name="slider_green" ValueChanged="ColorSlider_ValueChanged" />
+        </DockPanel>
+
+        <DockPanel VerticalAlignment="Center" Margin="10">
+            <Label DockPanel.Dock="Left" FontWeight="Bold" Content="B:"/>
+            <TextBox Text="{Binding BlueValue, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" Width="40" />
+            <Slider Maximum="255" TickPlacement="BottomRight" TickFrequency="5" Value="{Binding BlueValue,Mode=TwoWay}" IsSnapToTickEnabled="True" x:Name="slider_blue" ValueChanged="ColorSlider_ValueChanged" />
+        </DockPanel>
+    </StackPanel>
+</Window>

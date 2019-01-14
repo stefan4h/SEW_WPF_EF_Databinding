@@ -10,31 +10,31 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Slider_Databinding_Example
 {
     /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
+    /// Interaktionslogik für ColourSlider.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ColourSlider : Window
     {
-        public MainWindow()
+        public ColourSlider()
         {
             InitializeComponent();
+            ValueChanged();
+        }
+        private void ColorSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            ValueChanged();
         }
 
-        private void ButtonNormal_OnClick(object sender, RoutedEventArgs e)
+        private void ValueChanged()
         {
-            NormalSlider window=new NormalSlider();
-            window.ShowDialog();
+            Color color = Color.FromRgb((byte)slider_red.Value, (byte)slider_green.Value, (byte)slider_blue.Value);
+            this.Background = new SolidColorBrush(color);
         }
 
-        private void ButtonColour_OnClick(object sender, RoutedEventArgs e)
-        {
-            ColourSlider window=new ColourSlider();
-            window.ShowDialog();
-        }
+
     }
 }
