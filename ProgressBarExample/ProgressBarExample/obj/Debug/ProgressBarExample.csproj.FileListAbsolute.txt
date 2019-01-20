@@ -1,0 +1,16 @@
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\bin\Debug\ProgressBarExample.exe.config
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\bin\Debug\ProgressBarExample.exe
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\bin\Debug\ProgressBarExample.pdb
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\obj\Debug\ProgressBarExample.csprojResolveAssemblyReference.cache
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\obj\Debug\MainWindow.g.cs
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\obj\Debug\App.g.cs
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\obj\Debug\ProgressBarExample_MarkupCompile.cache
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\obj\Debug\ProgressBarExample_MarkupCompile.lref
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\obj\Debug\MainWindow.baml
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\obj\Debug\ProgressBarExample.g.resources
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\obj\Debug\ProgressBarExample.Properties.Resources.resources
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\obj\Debug\ProgressBarExample.csproj.GenerateResource.Cache
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\obj\Debug\ProgressBarExample.csproj.CoreCompileInputs.cache
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\obj\Debug\ProgressBarExample.exe
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\obj\Debug\ProgressBarExample.pdb
+C:\Users\Matthias\Desktop\DataBindingRepo\SEW_WPF_EF_Databinding\ProgressBarExample\ProgressBarExample\obj\Debug\GeneratedInternalTypeHelper.g.cs
