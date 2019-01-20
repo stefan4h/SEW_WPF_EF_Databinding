@@ -18,7 +18,7 @@ namespace RadioButtonCheckBox_Example
     {
         private ESelection selection;
         private bool visible;
-
+        //Currently selected enum value
         public ESelection Selection{
             get
             {
@@ -30,7 +30,7 @@ namespace RadioButtonCheckBox_Example
                 CallPropertyChanged("Selection");
             }
         }
-
+        //Bool which determines if groupbox is visible or not
         public bool Visible
         {
             get
@@ -49,7 +49,7 @@ namespace RadioButtonCheckBox_Example
             selection = ESelection.SECOND_SELECTION;
             visible = true;
         }
-
+        //Shows the currently selected enum value
         public RelayCommand ShowSelection
         {
             get

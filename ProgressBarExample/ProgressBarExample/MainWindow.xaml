@@ -6,15 +6,18 @@
         xmlns:local="clr-namespace:ProgressBarVMSpace"
         mc:Ignorable="d"
         Title="MainWindow" Height="132.036" Width="532.335">
+    
     <Window.DataContext>
         <local:ProgressBarVM></local:ProgressBarVM>
     </Window.DataContext>
     <Grid>
-        <ProgressBar HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" VerticalAlignment="Top" Width="497" Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}" Value="{Binding CurrentValue, Mode=TwoWay}"/>
+        <!-- Displays CurrentValue from ProgressBarVM. The maximum and minimum are also defined in ProgressBarVM-->
+        <ProgressBar HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" VerticalAlignment="Top" Width="497" Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}" Value="{Binding CurrentValue}"/>
+        <!-- Changes current value and text changes if the CurrentValue changes-->
         <TextBox HorizontalAlignment="Left" Height="23" Margin="387,68,0,0" TextWrapping="Wrap" Text="{Binding CurrentValue, Mode=TwoWay}" VerticalAlignment="Top" Width="120" x:Name="txt_value"/>
+        <!-- Automatically increase CurrentValue every second -->
         <Button Content="Start" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="75" Height="23" Command="{Binding IncreaseToMax}"/>
+        <!-- Stops the timer that increases CurrentValue-->
         <Button Content="Stop" HorizontalAlignment="Left" Margin="90,68,0,0" VerticalAlignment="Top" Width="75" Height="23" Command="{Binding StopIncreaseToMax}"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="170,68,0,0" VerticalAlignment="Top" Width="80" Height="23"/>
-
     </Grid>
 </Window>

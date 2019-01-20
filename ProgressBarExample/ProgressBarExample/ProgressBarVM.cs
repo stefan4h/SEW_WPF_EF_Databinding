@@ -30,7 +30,7 @@ namespace ProgressBarVMSpace
             maxValue = 100;
             currentValue = 99;
         }
-
+        //Current value of the progressbar
         public int CurrentValue
         {
             get
@@ -43,6 +43,7 @@ namespace ProgressBarVMSpace
                 CallPropertyChanged("CurrentValue");
             }
         }
+        //Minimum of the progressbar
         public int MinValue
         {
             get
@@ -50,6 +51,7 @@ namespace ProgressBarVMSpace
                 return minValue;
             }
         }
+        //Maximumn of the progressbar
         public int MaxValue
         {
             get
@@ -57,6 +59,7 @@ namespace ProgressBarVMSpace
                 return maxValue;
             }
         }
+        //Command that sets the timer
         public RelayCommand IncreaseToMax
         {
             get
@@ -72,7 +75,7 @@ namespace ProgressBarVMSpace
                     o => true);
             }
         }
-
+        //Command that stops and disposes the timer
         public RelayCommand StopIncreaseToMax
         {
             get
@@ -86,7 +89,7 @@ namespace ProgressBarVMSpace
                     o => true);
             }
         }
-
+        //Method that is called every second by the timer
         private void Increase(Object source, ElapsedEventArgs e)
         {
             if (CurrentValue < MaxValue)

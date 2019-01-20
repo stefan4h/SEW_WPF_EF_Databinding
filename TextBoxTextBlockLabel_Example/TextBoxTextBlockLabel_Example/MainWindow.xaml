@@ -5,19 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TextBoxTextBlockLabel_Example"
         mc:Ignorable="d"
-        Title="MainWindow" Height="438.024" Width="525">
+        Title="MainWindow" Height="459.007" Width="525">
     <Window.DataContext>
         <local:TextBoxTextBlockLabelVM></local:TextBoxTextBlockLabelVM>
     </Window.DataContext>
     <Grid>
+        <!--Label bound to Heading from TextBoxTextBlockLabelVM-->
         <Label Content="{Binding Heading}" HorizontalAlignment="Left" Margin="277,10,0,0" VerticalAlignment="Top" Width="230"/>
+        <!--TextBlock bound to Content form TextBoxTextBlockLabelVM-->
         <TextBlock HorizontalAlignment="Left" Margin="277,41,0,0" TextWrapping="Wrap" Text="{Binding Content}" VerticalAlignment="Top" Height="156" Width="230"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,40,0,0" TextWrapping="Wrap" Text="{Binding Heading, Mode=TwoWay}" VerticalAlignment="Top" Width="216"/>
-        <Label Content="Heading" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="216"/>
-        <Label Content="Content" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="216"/>
-        <TextBox HorizontalAlignment="Left" Height="178" Margin="10,99,0,0" TextWrapping="Wrap" Text="{Binding Content, Mode=TwoWay}" VerticalAlignment="Top" Width="216"/>
+        <!--TextBox bound to Heading from TextBoxTextBlockLabelVM.-->
+        <TextBox x:Name="txt_Heading" HorizontalAlignment="Left" Height="23" Margin="10,40,0,0" TextWrapping="Wrap" Text="{Binding Heading, Mode=TwoWay}" VerticalAlignment="Top" Width="216"/>
+        <!--Label that helps to access txt_Heading easily (alt+H)-->
+        <Label HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="216" Target="{Binding ElementName=txt_Heading}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="http://cdn1.iconfinder.com/data/icons/fatcow/16/bullet_green.png" Height="10" Width="10"/>
+                <AccessText Text="_Heading" />
+            </StackPanel>
+        </Label>
+        <!--Label that helps to access txt_Content easily (alt+C)-->
+        <Label Content="_Content" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="216" Target="{Binding ElementName=txt_Content}"/>
+        <TextBox HorizontalAlignment="Left" Height="178" Margin="10,99,0,0" TextWrapping="Wrap" Text="{Binding Content, Mode=TwoWay}" VerticalAlignment="Top" Width="216" x:Name="txt_Content"/>
+        <!--Command that clears Heading from TextBoxTextBlockLabelVM-->
         <Button Content="Clear heading" HorizontalAlignment="Left" Margin="10,282,0,0" VerticalAlignment="Top" Width="216" Command="{Binding ClearHeading}"/>
+        <!--Command that clears Content from TextBoxTextBlockLabelVM-->
         <Button Content="Clear content" HorizontalAlignment="Left" Margin="10,307,0,0" VerticalAlignment="Top" Width="216" Command="{Binding ClearContent}"/>
+        <!--Command that clears Content and Heading from TextBoxTextBlockLabelVM-->
         <Button Content="Clear everything" HorizontalAlignment="Left" Margin="10,332,0,0" VerticalAlignment="Top" Width="216" Command="{Binding ClearBoth}"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="1" Margin="279,31,0,0" Stroke="Black" VerticalAlignment="Top" Width="221" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>

@@ -18,7 +18,7 @@ namespace TextBoxTextBlockLabel_Example
         private string heading;
 
         private string content;
-
+        //Content displayed in textblock
         public string Content
         {
             get
@@ -31,7 +31,7 @@ namespace TextBoxTextBlockLabel_Example
                 CallPropertyChanged("Content");
             }
         }
-
+        //Heading displayed in label
         public string Heading
         {
             get
@@ -50,7 +50,7 @@ namespace TextBoxTextBlockLabel_Example
             heading = "Beispiel";
             content = "Das ist ein Beispiel!Das ist ein Beispiel!Das ist ein Beispiel!Das ist ein Beispiel!Das ist ein Beispiel!Das ist ein Beispiel!Das ist ein Beispiel!";
         }
-
+        //Clears Heading
         public RelayCommand ClearHeading
         {
             get
@@ -63,6 +63,7 @@ namespace TextBoxTextBlockLabel_Example
                     o => true);
             }
         }
+        //Clears Content
         public RelayCommand ClearContent
         {
             get
@@ -75,6 +76,7 @@ namespace TextBoxTextBlockLabel_Example
                     o => true);
             }
         }
+        //Clears Content and Heading
         public RelayCommand ClearBoth
         {
             get

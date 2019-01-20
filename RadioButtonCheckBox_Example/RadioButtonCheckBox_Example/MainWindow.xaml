@@ -10,12 +10,17 @@
         <local:RadioButtonCheckBoxVM></local:RadioButtonCheckBoxVM>
     </Window.DataContext>
     <Grid>
+        <!-- Includes coverters that are being used-->
         <Grid.Resources>
+            <!--This is a custom converter which converts enums to bools and bools to enums-->
             <local:EnumBooleanConverter x:Key="EnumBooleanConverter" />
+            <!--This converter is already implemented and provided-->
             <BooleanToVisibilityConverter x:Key="b2v"/>
         </Grid.Resources>
+        <!--The header of the groupbox is the chosen enum value. The property Visibility uses a bool in the RadioButtonCheckBoxVM and the provided BooleanToVisibilityConverter to determine if the groubox is visible or not-->
         <GroupBox Header="{Binding Path=Selection}" HorizontalAlignment="Left" Height="153" Margin="10,10,0,0" VerticalAlignment="Top" Width="175" Visibility="{Binding Path=Visible, Converter={StaticResource b2v}}">
             <StackPanel>
+                <!--The IsChecked-Properties of the radiobuttons are bound to Selection from RadioButtonCheckBoxVM. They use the custom EnumBooleanConverter and ConverterParameter (in this example the enum values are being used; can also be string or something else) to determine if the rradiobuttons needs to be checked-->
                 <RadioButton IsChecked="{Binding Path=Selection, Converter={StaticResource EnumBooleanConverter}, ConverterParameter={x:Static local:ESelection.FIRST_SELECTION}}" x:Name="rdb_FirstSelection" Content="FirstSelection" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
                 <RadioButton IsChecked="{Binding Path=Selection, Converter={StaticResource EnumBooleanConverter}, ConverterParameter={x:Static local:ESelection.SECOND_SELECTION}}" x:Name="rdb_SecondSelection" Content="SecondSelection" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
                 <RadioButton IsChecked="{Binding Path=Selection, Converter={StaticResource EnumBooleanConverter}, ConverterParameter={x:Static local:ESelection.THIRD_SELECTION}}" x:Name="rdb_ThirdSelection" Content="ThirdSelection" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
@@ -23,7 +28,9 @@
                 <RadioButton IsChecked="{Binding Path=Selection, Converter={StaticResource EnumBooleanConverter}, ConverterParameter={x:Static local:ESelection.FIFTH_SELECTION}}" x:Name="rdb_FifthSelection" Content="FifthSelection" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
             </StackPanel>
         </GroupBox>
+        <!--Command that opens a messagebox with the selected enum value-->
         <Button Content="Show Selection" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Width="175" Command="{Binding ShowSelection}"/>
+        <!--Hides or shows the groupbox-->
         <CheckBox Content="Visible Radiobuttons" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top" Width="175" IsChecked="{Binding Path=Visible}"/>
     </Grid>
 </Window>
