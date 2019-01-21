@@ -1,0 +1,36 @@
+﻿<Window x:Class="ListBox_Example.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListBox_Example"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <local:SkillVM/>
+    </Window.DataContext>
+    <Grid>
+        <ListBox Name="lb_skills" HorizontalContentAlignment="Stretch" Margin="0,0,264.4,-0.2" ItemsSource="{Binding Skills,UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedSkill,Mode=TwoWay}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Name}" />
+                        <ProgressBar Grid.Column="1" Minimum="0" Maximum="100" Value="{Binding Percent}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Skill" HorizontalAlignment="Left" Margin="259,10,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="289,13,0,0" TextWrapping="Wrap" Text="{Binding Skill.Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="414,13,0,0" VerticalAlignment="Top" Width="75" Command="{Binding AddSkillCommand}"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="3" Margin="254,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="264"/>
+        <TextBlock HorizontalAlignment="Left" Margin="360,60,0,0" TextWrapping="Wrap" Text="{Binding SelectedSkill.Name}" VerticalAlignment="Top"/>
+        <Button Content="Add Percent" HorizontalAlignment="Left" Margin="268,92,0,0" VerticalAlignment="Top" Width="105" Command="{Binding AddPercentageCommand}"/>
+        <Button Content="Remove Percent" HorizontalAlignment="Left" Margin="401,92,0,0" VerticalAlignment="Top" Width="107" Command="{Binding RemovePercentageCommand}" />
+
+    </Grid>
+</Window>

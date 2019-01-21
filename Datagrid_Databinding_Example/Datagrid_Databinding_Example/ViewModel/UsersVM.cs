@@ -49,7 +49,7 @@ namespace Datagrid_Databinding_Example.ViewModel
 
         public ICommand OpenCreateUserViewCommand
         {
-            get { return new RelayCommand(o => ShowCreateUserView(), o => true); }
+            get { return new RelayCommand(o => ShowCreateUserView()); }
         }
 
         private void ShowCreateUserView()
@@ -62,7 +62,7 @@ namespace Datagrid_Databinding_Example.ViewModel
 
         public ICommand CreateUserCommand
         {
-            get { return new RelayCommand(o => CreateUser(), o => true); }
+            get { return new RelayCommand(o => CreateUser()); }
         }
 
         private void CreateUser()
@@ -93,7 +93,7 @@ namespace Datagrid_Databinding_Example.ViewModel
 
         public ICommand UpdateUserCommand
         {
-            get { return new RelayCommand(o => UpdateUser(), o => true); }
+            get { return new RelayCommand(o => UpdateUser()); }
         }
 
         private void UpdateUser()
