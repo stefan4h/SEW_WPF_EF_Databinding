@@ -23,12 +23,13 @@ namespace ListBox_Example
         public MainWindow()
         {
             InitializeComponent();
+            //Initialize some Data
             List<Skill> skills = new List<Skill>()
             {
-                new Skill() {Name = "C#", Percent = 80},
-                new Skill() {Name = "Java", Percent = 50},
-                new Skill() {Name = "Python", Percent = 20},
-                new Skill() {Name = "Entity Framework", Percent = 60},
+                new Skill() {Name = "VueJS", Percent = 80},
+                new Skill() {Name = "ReactJS", Percent = 50},
+                new Skill() {Name = "Django", Percent = 20},
+                new Skill() {Name = "Rails", Percent = 60},
                 new Skill() {Name = "Angular", Percent = 70},
                 new Skill() {Name = "Aurelia", Percent = 30},
                 new Skill() {Name = "Backbone", Percent = 10},

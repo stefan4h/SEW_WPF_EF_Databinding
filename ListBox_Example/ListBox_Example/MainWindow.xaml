@@ -10,7 +10,7 @@
         <local:SkillVM/>
     </Window.DataContext>
     <Grid>
-        <ListBox Name="lb_skills" HorizontalContentAlignment="Stretch" Margin="0,0,264.4,-0.2" ItemsSource="{Binding Skills,UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedSkill,Mode=TwoWay}">
+        <ListBox Name="lb_skills" HorizontalContentAlignment="Stretch" Margin="0,0,264.4,-0.2" ItemsSource="{Binding Skills}" SelectedItem="{Binding SelectedSkill}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,2">
@@ -25,7 +25,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <Label Content="Skill" HorizontalAlignment="Left" Margin="259,10,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="289,13,0,0" TextWrapping="Wrap" Text="{Binding Skill.Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="289,13,0,0" TextWrapping="Wrap" Text="{Binding Skill.Name,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
         <Button Content="Add" HorizontalAlignment="Left" Margin="414,13,0,0" VerticalAlignment="Top" Width="75" Command="{Binding AddSkillCommand}"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="3" Margin="254,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="264"/>
         <TextBlock HorizontalAlignment="Left" Margin="360,60,0,0" TextWrapping="Wrap" Text="{Binding SelectedSkill.Name}" VerticalAlignment="Top"/>

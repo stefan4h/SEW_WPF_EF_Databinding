@@ -8,7 +8,7 @@ using Datagrid_Databinding_Example.Model;
 
 namespace Datagrid_Databinding_Example
 {
-    public class ContextClass:System.Data.Entity.DbContext
+    public class ContextClass:DbContext
     {
         public DbSet<User> Users { get; set; }
 
@@ -20,7 +20,7 @@ namespace Datagrid_Databinding_Example
 
         public ContextClass() : base("Datagrid_Example")
         {
-            System.Data.Entity.Database.SetInitializer<ContextClass>(new CustomInitializer());
+            Database.SetInitializer(new CustomInitializer());
             Database.Initialize(true);
         }
     }

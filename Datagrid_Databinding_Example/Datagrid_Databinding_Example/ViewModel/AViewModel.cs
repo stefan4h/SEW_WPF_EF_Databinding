@@ -9,7 +9,7 @@ using Datagrid_Databinding_Example.Annotations;
 
 namespace Datagrid_Databinding_Example.ViewModel
 {
-    public class AViewModel:INotifyPropertyChanged
+    public abstract class AViewModel:INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

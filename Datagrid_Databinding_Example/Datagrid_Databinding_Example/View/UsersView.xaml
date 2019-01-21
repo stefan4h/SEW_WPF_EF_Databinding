@@ -23,7 +23,7 @@
                 <DataGridTextColumn Header="Birthday" Binding="{Binding BirthDate}" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="btn_delete" Content="Delete" Command="{Binding RemoveUserCommand,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="15,278,0,-18" VerticalAlignment="Top" Width="104" Height="40"/>
+        <Button Name="btn_delete" Content="Delete" Command="{Binding RemoveUserCommand}" HorizontalAlignment="Left" Margin="15,278,0,-18" VerticalAlignment="Top" Width="104" Height="40"/>
         <Button x:Name="btn_create" Content="Create" Command="{Binding OpenCreateUserViewCommand}" HorizontalAlignment="Left" Margin="145,278,0,0" VerticalAlignment="Top" Width="104" Height="40"/>
         <Button x:Name="btn_update" Content="Update" Command="{Binding OpenUpdateUserViewCommand}" HorizontalAlignment="Left" Margin="270,278,0,0" VerticalAlignment="Top" Width="104" Height="40"/>
         <Button x:Name="btn_detail" Content="Detail" Command="{Binding OpenUserViewCommand}" HorizontalAlignment="Left" Margin="395,278,0,0" VerticalAlignment="Top" Width="104" Height="40"/>

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace Slider_Databinding_Example
 {
@@ -42,7 +43,14 @@ namespace Slider_Databinding_Example
             }
         }
 
-        public RelayCommand RandomColour
+        //private SolidColorBrush background;
+        //public SolidColorBrush Background
+        //{
+        //    get => background;
+        //    set { background}
+        //}
+
+        public RelayCommand RandomColourCommand
         {
             get
             {
